@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación XV Años de Vanessa 💙</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #c7d2fe, #f0f9ff);
+      color: #1e3a8a;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+    #tsparticles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    header {
+      padding: 60px 20px 20px;
+      background: linear-gradient(to bottom, rgba(30,58,138,0.7), rgba(147,197,253,0.6)), url('https://cdn.pixabay.com/photo/2016/10/18/21/22/stars-1755783_1280.jpg') center/cover no-repeat;
+      background-attachment: fixed;
+      color: white;
+      text-shadow: 1px 1px 3px #000;
+      animation: fadeIn 3s ease-in-out;
+      position: relative;
+    }
+    header::before {
+      content: url('corona_dorada.svg');
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      opacity: 0.4;
+      width: 60px;
+    }
+    h1 {
+      font-size: 3.2em;
+      font-family: 'Great Vibes', cursive;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    p.subtext {
+      font-size: 1.3em;
+      margin: 0 auto;
+      max-width: 700px;
+      color: #f0f9ff;
+    }
+    .intro {
+  background: rgba(240, 249, 255, 0.2);
+  backdrop-filter: blur(2px);
+  padding: 60px 20px 40px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+    .intro h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #1e3a8a;
+    }
+    .intro p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 10px auto;
+      color: #334155;
+    }
+    .section {
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 30px;
+      border-radius: 20px;
+      background: linear-gradient(to bottom right, #ffffffcc, #f0f9ffcc);
+      animation: fadeInUp 1.5s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border: 2px solid #d1d5db;
+      transition: all 0.6s ease;
+    }
+    .section:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 25px rgba(212,175,55,0.3);
+    }
+    .section h2, .section h3 {
+      font-family: 'Great Vibes', cursive;
+      color: #1e3a8a;
+      border-bottom: 2px solid #facc15;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .countdown {
+      font-size: 1.6em;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+    .mapa iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+    .boton-wsp {
+      display: block;
+      margin: 20px auto;
+      padding: 14px 28px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 30px;
+      font-size: 18px;
+      text-decoration: none;
+      width: 80%;
+      max-width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .boton-wsp:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #25D366;
+    }
+    .calendar {
+      font-size: 1.2em;
+      margin: 20px 0;
+      background-color: #e0f2fe;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .calendar strong {
+      font-size: 1.5em;
+      color: #1e40af;
+    }
+    .gallery-placeholder {
+      padding: 40px;
+      font-style: italic;
+      color: #64748b;
+    }
+    .audio-control {
+      margin-top: 20px;
+    }
+    button#playMusic {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #93c5fd;
+    }
+    hr.decorative {
+      border: none;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #facc15, transparent);
+      margin: 40px auto;
+      width: 60%;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  margin: 30px auto 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: max-content;
+}
+
+.carousel img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  padding: 12px;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.prev:hover, .next:hover {
+  background-color: #e0f2fe;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+  </style>
+  
+</head>
+<body>
+  <div id="tsparticles"></div>
+  
+  <section class="intro" data-aos="fade-up">
+    <h2>Érase una vez...</h2>
+    <p>En un lugar no tan lejano, nació una niña que llenó de luz y alegría los corazones de todos a su alrededor.</p>
+    <p>Pasaron los años, y esa niña creció soñando con un dia mágico, como sacado de un cuento de hadas.</p>
+    <p>Hoy, esa princesa está lista para vivir su gran dia.. y quiere que tú formes parte de su historia.</p>
+  </section>
+
+  <header>
+    <h1>Vanessa Yamileth</h1>
+    <p class="subtext">Con mucha emoción, <strong>¡te invito a mis XV años!</strong></p>
+    <div class="audio-control">
+      <button id="playMusic">🎵 Iniciar música</button>
+    </div>
+  </header>
+
+  <hr class="decorative" />
+  <!-- ⭐ Separador de estrellas -->
+  <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 100'><g fill='%23facc15' opacity='0.5'><polygon points='400,20 410,60 450,60 415,80 430,120 400,95 370,120 385,80 350,60 390,60'/><circle cx='200' cy='60' r='10'/><circle cx='600' cy='60' r='10'/><circle cx='100' cy='40' r='6'/><circle cx='700' cy='40' r='6'/></g></svg>" style="width: 100%; margin: 20px 0;" />
+
+  <section class="section" data-aos="fade-up">
+    <h2>Detalles del Evento</h2>
+    <p>Lugar: <strong>Salón "La Hacienda"</strong></p>
+    <p>Dirección: Plan de Ayala 255, Colonia Tierra y Libertad, Uruapan, Michoacán</p>
+  </section>
+
+  <section class="section calendar" data-aos="fade-up">
+    <p>📅 La cita es el:</p>
+    <strong>30 de agosto de 2025</strong>
+  </section>
+
+  <section class="section countdown" data-aos="fade-up">
+    <h3>⏳ Falta para el gran dia:</h3>
+    <div id="cuentaRegresiva"></div>
+  </section>
+
+ 
+  <section class="section mapa" data-aos="fade-up">
+    <h3>¿Cómo llegar?</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.686027130956!2d-102.05596342569312!3d19.408177781837734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842d0f14482d918d%3A0x7c70b9c58862ce99!2sPlan%20de%20Ayala%20255%2C%20Tierra%20y%20Libertad%2C%2060040%20Uruapan%2C%20Mich.%2C%20M%C3%A9xico!5e0!3m2!1ses-419!2smx!4v1691262632000!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+  <h3>📸 Galería</h3>
+  <div class="carousel-container">
+    <div class="carousel" id="carousel">
+      <img src="foto1.jfif" alt="Foto 1">
+      <img src="foto2.jfif" alt="Foto 2">
+      <img src="foto3.jfif" alt="Foto 3">
+      <img src="foto4.jfif" alt="Foto 4">
+      <img src="foto5.jfif" alt="Foto 5">
+      <img src="foto6.jfif" alt="Foto 6">
+      <img src="foto7.jfif" alt="Foto 7">
+      <img src="foto8.jfif" alt="Foto 8">
+    </div>
+    <button class="prev" onclick="moveCarousel(-1)">⟨</button>
+    <button class="next" onclick="moveCarousel(1)">⟩</button>
+  </div>
+</section>
+
+ <!-- 🦋 Mariposa flotante -->
+  <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 50 C40 30, 20 30, 20 50 C20 70, 40 70, 50 50 Z' fill='violet' /><path d='M50 50 C60 30, 80 30, 80 50 C80 70, 60 70, 50 50 Z' fill='plum' /><circle cx='50' cy='50' r='5' fill='purple' /></svg>" style="position: absolute; bottom: 100px; left: 50px; width: 60px; opacity: 0.3;" />
+
+
+  <section class="section" data-aos="fade-up">
+    <h3>📝 Un Mensaje para Ti</h3>
+    <p>Gracias por ser parte de mi vida. Me hace muy feliz compartir este momento contigo. ¡Nos vemos en mi gran noche!</p>
+    <p>Con cariño,</p>
+    <h2 style="font-family: 'Great Vibes', cursive;">Vanessa 💙</h2>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h3>Confirmar Asistencia</h3>
+    <p>Haz clic en el botón para confirmar tu asistencia vía WhatsApp:</p>
+    <a class="boton-wsp" href="https://wa.me/5214431234567?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20tus%20XV%20Vanessa" target="_blank">Confirmar por WhatsApp</a>
+    <a class="boton-wsp" style="background-color:#1e3a8a;" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XV+A%C3%B1os+Vanessa+Yamileth&dates=20250830T180000Z/20250831T000000Z&details=Vanessa+te+invita+a+celebrar+sus+XV+A%C3%B1os&location=Plan+de+Ayala+255%2C+Uruapan%2C+Michoac%C3%A1n" target="_blank">Agregar al Calendario 📅</a>
+  </section>
+
+  <audio id="bgMusic" loop>
+    <source src="tiempo_de_vals.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    const playBtn = document.getElementById("playMusic");
+    const music = document.getElementById("bgMusic");
+    playBtn.addEventListener("click", () => {
+      music.play();
+      playBtn.disabled = true;
+      playBtn.textContent = "🎶 Música activada";
+    });
+
+    const fechaEvento = new Date("August 30, 2025 18:00:00").getTime();
+    const cuenta = setInterval(function() {
+      const ahora = new Date().getTime();
+      const diferencia = fechaEvento - ahora;
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+      document.getElementById("cuentaRegresiva").innerHTML = 
+        dias + " días " + horas + " h " + minutos + " m " + segundos + " s ";
+
+      if (diferencia < 0) {
+        clearInterval(cuenta);
+        document.getElementById("cuentaRegresiva").innerHTML = "¡Ya comenzó la celebración!";
+      }
+    }, 1000);
+
+    tsParticles.load("tsparticles", {
+      background: { color: "transparent" },
+      particles: {
+        number: { value: 80 },
+        color: { value: "#a5b4fc" },
+        shape: { type: "star" },
+        opacity: { value: 0.7 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1 }
+      },
+      interactivity: {
+        events: { onHover: { enable: true, mode: "repulse" } },
+        modes: { repulse: { distance: 100 } }
+      },
+      fullScreen: { enable: false }
+    });
+  </script>
+  <script>
+  let currentIndex = 0;
+
+  function moveCarousel(direction) {
+    const carousel = document.getElementById('carousel');
+    const totalImages = carousel.children.length;
+    const imageWidth = carousel.children[0].clientWidth;
+
+    currentIndex += direction;
+
+    if (currentIndex < 0) currentIndex = totalImages - 1;
+    if (currentIndex >= totalImages) currentIndex = 0;
+
+    const offset = -imageWidth * currentIndex;
+    carousel.style.transform = `translateX(${offset}px)`;
+  }
+</script>
+
+</body>
+</html>
